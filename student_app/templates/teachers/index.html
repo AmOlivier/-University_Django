@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<title>Liste des Etudiants</title>
+<title>Liste des Teachers</title>
 </head>
 <body>
     <h1>Liste des élèves</h1>
@@ -14,13 +14,13 @@
             </tr>
         </thead>
         <div>
-        {% for student in students %}
+        {% for teacher in teachers %}
             <tbody>
                 <tr>
-                    <th scope="row">{{ student.prenom }}
+                    <th scope="row">{{ teacher.prenom }}
                     </th>
                     <td>
-                        <a href="{% url 'student_app:student' student.id %}">{{ student.nom }}
+                        <a href="{% url 'student_app:teacher' teacher.id %}">{{ teacher.nom }}
                         </a>
                     </td>
                 </tr>

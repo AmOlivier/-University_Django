@@ -22,3 +22,20 @@ class Note(models.Model):
 
 	def __str__(self):
 		return self.matiere
+
+class Teacher(models.Model):
+    prenom = models.CharField(max_length=20)
+    nom = models.CharField(max_length=20)
+    email = models.EmailField(max_length=40)
+    matiere = models.CharField(max_length=20)
+    date_naissance = models.DateField()
+
+    def __repr__(self):
+        return"<Topic {}>".format(self.nom)
+
+    def __str__(self):
+        return self.nom
+
+    
+
+
