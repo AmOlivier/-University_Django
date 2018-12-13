@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="container">
+  <div class="list-group">
+      <span class="glyphicon glyphicon-file"></span>
+      {% for student in students %}
+
+			<a href="{% url 'student_app:student' student.id %}">{{student.prenom}}</a>
+
+			{% endfor %}
+      <span class="pull-right">
+        
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </span>
+    </a>
+  </div>
+</div>
+</body>
+</html>
+<

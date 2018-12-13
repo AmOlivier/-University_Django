@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>details</title>
+</head>
+<body>
+<h3>{{ student.prenom}}</h3>
+        <h3>{{ student.nom }}</h3>
+        <h3>{{ student.date_naissance }}</h3>
+			<ul>
+			        {% for note in notes %}
+			<li>
+			        {{note.matiere}}
+			</li>
+<li>
+			        {{note.note}}
+			</li>
+			        {% endfor %}
+			</ul>
+        <a href="{% url 'student_app:students' %}">liste etudiants</a>
+</body>
+</html>
